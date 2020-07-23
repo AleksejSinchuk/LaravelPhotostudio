@@ -32,9 +32,7 @@
 </div>
     <div class="rightcol">
     <div class="container">
-            @foreach($photoes as $photo)
-                <div class="cont"><img src="{{$dir}}/{{$photo}}"/></div>
-            @endforeach
+           <p>RightCol</p>
     </div>
     </div>
     <script>

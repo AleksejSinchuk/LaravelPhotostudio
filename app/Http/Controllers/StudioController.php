@@ -69,3 +69,20 @@ function getPhotoesFromOneCatalog($dirToCatalog){
 }
 
 //====================================================
+function image_resize($imgList,$catalogname)
+{
+    $photoes=array();
+    foreach ($imgList as $img){
+    $size = GetImageSize('storage/img/'.$catalogname.'/'.$img);
+    if( $size[0]<$size[1]){
+        $size[0] = "960";
+        $size[1] = "1280";
+    }
+    else{
+        $size[0] = "1280";
+        $size[1] = "960";
+    }
+        array_push($photoes,$img);
+    }
+   return $photoes;
+}

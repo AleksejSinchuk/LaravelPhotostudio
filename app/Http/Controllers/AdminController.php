@@ -67,6 +67,9 @@ class AdminController extends Controller
         return redirect('/multiload');
     }
 
+
+
+
 //====================================================
 
     public static function delete(){
@@ -82,9 +85,8 @@ class AdminController extends Controller
             }
         }
 
-        $dir='storage/img/cars';
-        $photoes= array_diff( scandir( $dir), array('..', '.'));
-        return view('admin.delete',compact('photoes','dir','catalogs'));
+
+        return view('admin.delete',compact('dir','catalogs'));
     }
 
 
@@ -101,6 +103,9 @@ class AdminController extends Controller
     //====================================================
 
 }
+
+
+
 
 //----------------Functions----------------------
 
@@ -154,3 +159,6 @@ function RDir( $path ) {
 }
 
 //====================================================
+
+
+
